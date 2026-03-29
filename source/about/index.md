@@ -5,18 +5,10 @@ layout: about
 ---
 
 ## 关于本人
+-
+我出生于1990年代，但精神内核更接近1980年代，偏好复古与经典的审美，热爱中国传统文化、历史与艺术。创作与生活中我注重传承与记忆，常以文字记录乡土、人文与旧物的温度。
 
 ### 联系方式
 - 社交网络名：wwhai
 - github: `https://github.com/wwhai`
-- 个人G-MAIL: cnwwhai@gmail.com
-
-### 交流社区
-
-<img src="./wx.jpg" width="200px"></img>
-
-<h4 style="text-align:center;">
-  微信群: 本群是一个技术交流群，为了防止恶意广告，请先加博主好友 , 然后备注“来自博客”, 然后会被邀请加入本群。
-</h4>
-
-> 任何来访请备注: `来自博客`,如果是Hr，可备注: `Hr`
+- 个人G-MAIL: ·cnwwhai@gmail.com· | ·751957846@qq.com·

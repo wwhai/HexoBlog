@@ -105,7 +105,7 @@ navbar:
     - { key: 'archive', link: '/archives/'}
     - { key: 'category', link: '/categories/'}
     - { key: 'tag', link: '/tags/'}
-    - { key: 'FreeOpenLab', link: '/openlab/academic.html'}
+    # - { key: 'FreeOpenLab', link: '/openlab/academic.html'}
     - { key: 'about', link: '/about/'}
     - { key: 'links', link: '/links/'}
     - { key: 'EMQX插件市场', link: '/emqx/'}
