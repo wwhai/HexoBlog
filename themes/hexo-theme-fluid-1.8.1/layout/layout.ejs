@@ -12,13 +12,6 @@ var banner_mask_alpha = page.banner_mask_alpha || theme.index.banner_mask_alpha
 
 <body>
   <header style="height: <%- banner_img_height %>vh;">
-
-  <!-- 顶部提示 -->
-  <div class="alert alert-warning" role="alert"
-    style="margin-top: 70px; background-color: black;color: rgb(156, 255, 25);text-align: center;padding: 0 0 0 0;">
-    <strong>提示：本站一些文章的超时空时间是乱写的，主要是为了排序，并不是真实写作时间。</strong>
-  </div>
-
     <%- partial('_partial/nav') %>
     <div class="view intro-2" id="background" <%- theme.banner_parallax && 'parallax=true' %>
          style="background: url('<%- url_for(banner_img) %>') no-repeat center center;

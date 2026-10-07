@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 新四青年
-subtitle: 新四青年
-description: 新四青年 的技术分享
+title: WWHAI
+subtitle: WWHAI
+description: WWHAI 的个人网站
 author: wwhai
 
 server:
@@ -27,7 +27,6 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render: /openlab/**
 
 # Writing
 new_post_name: :year-:month-:day-:title.md # File name of new posts
