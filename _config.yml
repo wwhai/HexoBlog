@@ -7,14 +7,15 @@ title: WWHAI
 subtitle: WWHAI
 description: WWHAI 的个人网站
 author: wwhai
+language: zh-CN
 
 server:
-  port: 40000
+  port: 4001
   compress: true
   header: true
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://wwhai.gitee.io/
+url: http://wwhai.github.io/
 root: /
 permalink: :year/:month/:day/:id.html
 permalink_defaults:
@@ -73,7 +74,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: hexo-theme-fluid-1.8.1
+theme: fluid
 
 # Deployment
 deploy:

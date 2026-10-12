@@ -1,117 +1,161 @@
-<p align="right">中文简体 | <a title="English" href="README_en.md">English</a></p>
-
-<h1 align="center">Fluid</h1>
-
-<p align="center">一款 Material Design 风格的主题</p>
-
 <p align="center">
-  <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/fluid-dev/hexo-theme-fluid">
-  <img alt="Hexo version" src="https://img.shields.io/badge/Hexo-3%2B-orange">
-  <img alt="Contributors" src="https://img.shields.io/github/contributors/fluid-dev/hexo-theme-fluid.svg?style=flat">
-  <img alt="License" src="https://img.shields.io/github/license/fluid-dev/hexo-theme-fluid.svg?style=flat">
+  <img alt="Fluid Logo" src="https://avatars2.githubusercontent.com/t/3419353?s=280&v=4" width="128">
 </p>
 
-![ScreenShot](https://cdn.jsdelivr.net/gh/fluid-dev/static@master/hexo-theme-fluid/screenshots/1.png)
+<p align="center">一款 Material Design 风格的主题</p>
+<p align="center">An elegant Material-Design theme for Hexo</p>
 
+![ScreenShot](https://cdn.jsdelivr.net/gh/fluid-dev/static@master/hexo-theme-fluid/screenshots/index.png)
 
-## 演示
+<p align="center">
+  <a title="Hexo Version" target="_blank" href="https://hexo.io/zh-cn/"><img alt="Hexo Version" src="https://img.shields.io/badge/Hexo-%3E%3D%205.0-orange?style=flat"></a>
+  <a title="Node Version" target="_blank" href="https://nodejs.org/zh-cn/"><img alt="Node Version" src="https://img.shields.io/badge/Node-%3E%3D%2010.13.0-yellowgreen?style=flat"></a>
+  <a title="License" target="_blank" href="https://github.com/fluid-dev/hexo-theme-fluid/blob/master/LICENSE"><img alt="License" src="https://img.shields.io/github/license/fluid-dev/hexo-theme-fluid.svg?style=flat"></a>
+  <br>
+  <a title="GitHub Release" target="_blank" href="https://github.com/fluid-dev/hexo-theme-fluid/releases"><img alt="GitHub Release" src="https://img.shields.io/github/v/release/fluid-dev/hexo-theme-fluid?style=flat"></a>
+  <a title="Npm Downloads" target="_blank" href="https://www.npmjs.com/package/hexo-theme-fluid"><img alt="Npm Downloads" src="https://img.shields.io/npm/dt/hexo-theme-fluid?color=red&label=npm"></a>
+  <a title="GitHub Commits" target="_blank" href="https://github.com/fluid-dev/hexo-theme-fluid/commits/master"><img alt="GitHub Commits" src="https://img.shields.io/github/commit-activity/m/fluid-dev/hexo-theme-fluid.svg?style=flat&color=brightgreen&label=commits"></a>
+  <br><br>
+  <a title="GitHub Watchers" target="_blank" href="https://github.com/fluid-dev/hexo-theme-fluid/watchers"><img alt="GitHub Watchers" src="https://img.shields.io/github/watchers/fluid-dev/hexo-theme-fluid.svg?label=Watchers&style=social"></a>  
+  <a title="GitHub Stars" target="_blank" href="https://github.com/fluid-dev/hexo-theme-fluid/stargazers"><img alt="GitHub Stars" src="https://img.shields.io/github/stars/fluid-dev/hexo-theme-fluid.svg?label=Stars&style=social"></a>  
+  <a title="GitHub Forks" target="_blank" href="https://github.com/fluid-dev/hexo-theme-fluid/network/members"><img alt="GitHub Forks" src="https://img.shields.io/github/forks/fluid-dev/hexo-theme-fluid.svg?label=Forks&style=social"></a>  
+</p>
 
-[Rook1e's blog](https://0x2e.github.io)
+<p align="center">🇨🇳 中文简体  |  <a title="English" href="README_en.md">🇬🇧 English</a></p>
 
-[zkqiang's blog](http://zkqiang.cn)
+<p align="center">
+  <span>文档：</span>
+  <a href="https://hexo.fluid-dev.com/docs/guide/">主题配置</a> | 
+  <a href="https://hexo.io/zh-cn/docs/front-matter">文章配置</a>
+</p>
 
-## 公告
-
-:warning: 本公告面向老用户，新用户可忽略。
-
-从 `v1.4.0` 版本开始，本项目正式更名为 **Fluid** (原项目名：Material-T)，并将仓库和归属转移至 **Fluid-dev** 组织，因此 git remote url、主题目录名、相关代码 会有变化。
-
-如果您要升级到 `v1.4.0`，建议按如下操作：
-1. 解压 release 包后重命名为 `fluid` （建议使用 master 分支的用户重新 clone）
-2. 将博客根目录 `_config.yml` 配置修改 `theme: fluid`
-3. 修改主题配置文件，或使用「[平滑升级功能](#%E5%AE%9E%E7%8E%B0%E5%B9%B3%E6%BB%91%E5%8D%87%E7%BA%A7)」。
-
-给各位带来的不便敬请谅解。
+<p align="center">
+  <span>预览：</span>
+  <a href="https://hexo.fluid-dev.com/">Fluid's blog</a> | 
+  <a href="https://zkqiang.cn">zkqiang's blog</a>
+</p>
 
 ## 快速开始
 
-#### 1. 获取最新版本
+#### 1. 搭建 Hexo 博客
 
-请优先下载 [最新 release 版本](https://github.com/fluid-dev/hexo-theme-fluid /releases)，master 分支无法保证稳定。
+如果你还没有 Hexo 博客，请按照 [Hexo 官方文档](https://hexo.io/zh-cn/docs/) 进行安装、建站。
 
-下载后解压到 themes 目录下并重命名为 `fluid`。
+#### 2. 获取主题最新版本
 
-#### 2. 必要的配置
+**方式一：**
 
-按如下内容修改 Hexo 根目录中的 `_config.yml`
+Hexo 5.0.0 版本以上，推荐通过 npm 直接安装，进入博客目录执行命令：
 
-```yaml
-# 设置语言，需要对应下面目录内的文件名，可以自定义文件内容
-# https://github.com/fluid-dev/hexo-theme-fluid/tree/master/languages
-language: zh-CN
-
-# 关闭默认的代码高亮
-highlight:
-  enable: false
+```sh
+npm install --save hexo-theme-fluid
 ```
 
-#### 3. 启用主题
+然后在博客目录下创建 `_config.fluid.yml`，将主题的 [_config.yml](https://github.com/fluid-dev/hexo-theme-fluid/blob/master/_config.yml) 内容复制进去。
 
-依然是根目录中的 `_config.yml`，如下修改：
+**方式二：**
+
+下载 [最新 release 版本](https://github.com/fluid-dev/hexo-theme-fluid/releases) 解压到 themes 目录，并将解压出的文件夹重命名为 `fluid`。
+
+#### 3. 指定主题
+
+如下修改 Hexo 博客目录中的 `_config.yml`：
+
 ```yaml
-# Extensions
-theme: fluid
+theme: fluid  # 指定主题
+
+language: zh-CN  # 指定语言，会影响主题显示的语言，按需修改
 ```
 
-## 实现平滑升级
+#### 4. 创建「关于页」
 
-从 v1.4.0 版本开始可以使用 Hexo [数据文件](https://hexo.io/zh-cn/docs/data-files.html)存放主题配置：
+首次使用主题的「关于页」需要手动创建：
 
-1. 进入博客根目录的 `/source/_data/` 目录（注意：不是主题的 source 目录），若 `_data` 文件夹不存在，请自行创建
-2. 创建 `fluid_config.yml` 文件，并将主题配置文件中被修改的或者所有配置项复制到其中。这样 `fluid_config.yml` 会在 `hexo g` 时自动覆盖主题配置，并且不会在更新主题后丢失。
-3. 将您自定义的资源文件（head_img、about.md 等）移动到博客根目录的 `source` 文件夹中（别忘了修改配置文件中对资源的引用地址）
-4. (v1.5.0 版本及以上)如果需要使用 CDN 或其他方式存放静态资源：将 `_static_prefix.yml` 复制到博客根目录的 `/source/_data/` 中，重命名为 `fluid_static_prefix.yml`并按自己的需求修改配置。若 `_data/fluid_static_prefix.yml` 存在则会自动覆盖 `/theme/fluid/_static_prefix.yml`。
+```bash
+hexo new page about
+```
 
-完成上述步骤后，以后您只需用新的 release 覆盖 `/theme/fluid` 文件夹即可更新主题。
+创建成功后，编辑博客目录下 `/source/about/index.md`，添加 `layout` 属性。
 
-## 常见问题
+修改后的文件示例如下：
 
-#### 代码高亮效果异常
+```yaml
+---
+title: about
+layout: about
+---
 
-- 请确认已完成上述『关闭默认的代码高亮』步骤
-- 尝试清除命令 `hexo clean && hexo g`
+这里写关于页的正文，支持 Markdown, HTML
+```
 
-#### 配置无效
+## 更新主题
 
-- 请检查配置文件是否符合 yml 语法，如冒号后需要有空格，缩进需要 2 个空格等
+更新主题的方式[参照这里](https://hexo.fluid-dev.com/docs/start/#更新主题)。
 
-## 文档
+## 功能特性
 
-[详细配置](https://fluid-dev.github.io/hexo-fluid-docs/)
+- [x] 无比详实的[用户文档](https://hexo.fluid-dev.com/docs/)
+- [x] 页面组件懒加载
+- [x] 多种代码高亮方案
+- [x] 多语言配置
+- [x] 内置多款评论插件
+- [x] 内置网页访问统计
+- [x] 内置文章本地搜索
+- [x] 支持暗色模式
+- [x] 支持脚注语法
+- [x] 支持 LaTeX 数学公式
+- [x] 支持 mermaid 流程图
 
-[更新日志](https://github.com/fluid-dev/hexo-theme-fluid/blob/master/Changelog.md)
+## 鸣谢
 
-[文章配置](https://hexo.io/zh-cn/docs/front-matter)
-
-## 参与开发
-
-如果您是初次贡献，可以先从 [help wanted](https://github.com/fluid-dev/hexo-theme-fluid/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22) 列表中认领一个比较小的任务来快速参与社区贡献。您可以直接在相应 issue 中回复参与意愿，然后参照下面的 GitHub 工作流指引解决 issue 并按照规范提交 PR，通过 review 后就会被 merge 到 master 分支。
-
-推荐使用以下工作流参与贡献：
-
-1. 将仓库 fork 到自己的 GitHub，并 clone 到本地进行开发
-2. 创建新的分支，在新的分支上开发
-3. 保持分支与远程 develop 分支一致（通过 fetch 和 rebase 操作）
-4. 在本地提交变更（注意 commit log 保持简练、规范）
-5. 将提交 push 到 fork 的仓库下
-6. 创建一个 pull request 到 fluid-dev/hexo-theme-fluid 的 develop 分支
+<table>
+  <thead>
+    <tr>
+      <th align="center" style="width: 240px;">
+        <a href="https://www.jetbrains.com/?from=hexo-theme-fluid">
+          <img src="https://raw.githubusercontent.com/fluid-dev/static/690616966f34a58d66aa15ac7b550dd7bbc03967/hexo-theme-fluid/jetbrains.svg" height="200px"><br>
+          <sub>免费开发工具提供方 JetBrains</sub><br>
+        </a>
+      </th>
+      <th align="center" style="width: 240px;">
+        <a href="https://dartnode.com">
+          <img src="https://dartnode.com/branding/DN-Open-Source-sm.png" height="200px"><br>
+          <sub>免费 VPS 提供方 DartNode</sub><br>
+        </a>
+      </th>
+    </tr>
+  </thead>
+</table>
 
 ## 贡献者
 
 [![contributors](https://opencollective.com/hexo-theme-fluid/contributors.svg?width=890&button=false)](https://github.com/fluid-dev/hexo-theme-fluid/graphs/contributors)
 
-非代码贡献：@zhugaoqi
+英文文档翻译：[@EatRice](https://eatrice.top/) [@橙子杀手](https://ruru.eatrice.top) [@Sinetian](https://sinetian.github.io/)
 
-## 开源协议
+其他贡献：[@zhugaoqi](https://github.com/zhugaoqi) [@julydate](https://github.com/julydate) [@xiyuvi](https://xiyu.pro/)
 
-[MIT](https://github.com/fluid-dev/hexo-theme-fluid/blob/master/LICENSE)
+如你也想贡献代码，可参照[贡献指南](https://hexo.fluid-dev.com/docs/contribute/)
+
+## 支持我们
+
+如果你觉得这个项目有帮助，并愿意支持它的发展，可以通过以下方式支持我们的开源创作：
+
+<table>
+  <thead>
+    <tr>
+      <th align="center" width="240">
+        <div>
+          <img src="https://github.com/fluid-dev/static/blob/master/hexo-theme-fluid/sponsor.png?s=200&v=4" height="200px" alt="微信赞赏码"><br>
+          <sub>微信赞赏码</sub>
+        </div>
+      </th>
+    </tr>
+  </thead>
+</table>
+
+同时我们正在**寻求商业赞助**，如果贵司想在本页显著位置展示广告位（每月 6K+ Views 定向流量曝光），或者有其他赞助形式，可将联系方式发送邮件至 zkqiang#126.com (#替换为@)。
+
+## Star 趋势
+
+[![Stargazers over time](https://starchart.cc/fluid-dev/hexo-theme-fluid.svg)](https://starchart.cc/fluid-dev/hexo-theme-fluid)
