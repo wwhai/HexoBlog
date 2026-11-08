@@ -1,0 +1,170 @@
+<%
+page.banner_img = page.banner_img || theme.page.banner_img
+page.banner_img_height = page.banner_img_height || theme.page.banner_img_height
+page.banner_mask_alpha = page.banner_mask_alpha || theme.page.banner_mask_alpha
+var data = site.data.things || {}
+var groups = [
+  { title: '软件作品', items: data.software || [] },
+  { title: '文学作品', items: data.literature || [] }
+]
+%>
+
+<% groups.forEach(function (group) { %>
+  <section class="things-section">
+    <h2 class="things-section-title"><%= group.title %></h2>
+
+    <% if (group.items.length === 0) { %>
+      <div class="things-empty">暂无作品</div>
+    <% } else { %>
+      <div class="things-list">
+        <% group.items.forEach(function (item) { %>
+          <% if (!item || !item.name) return %>
+          <a class="thing-item"<%- item.link ? ' href="' + url_for(item.link) + '" target="_blank" rel="noopener"' : '' %>>
+            <% if (item.image) { %>
+              <img class="thing-icon" src="<%= url_for(item.image) %>" alt="<%= item.name %>">
+            <% } else { %>
+              <div class="thing-icon thing-icon-letter"><%= String(item.name).trim().charAt(0).toUpperCase() %></div>
+            <% } %>
+
+            <span class="thing-body">
+              <span class="thing-title"><%= item.name %></span>
+              <% if (item.desc) { %>
+                <span class="thing-desc"><%= item.desc %></span>
+              <% } %>
+            </span>
+
+            <% if (item.tags && item.tags.length) { %>
+              <span class="thing-tags">
+                <% item.tags.forEach(function (tag) { %>
+                  <span class="thing-tag"><%= tag %></span>
+                <% }) %>
+              </span>
+            <% } %>
+          </a>
+        <% }) %>
+      </div>
+    <% } %>
+  </section>
+<% }) %>
+
+<style>
+  .things-section {
+    margin-bottom: 1.75rem;
+  }
+
+  .things-section-title {
+    position: relative;
+    margin: 0 0 .25rem;
+    padding-left: .65rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--text-color);
+  }
+
+  .things-section-title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: .3em;
+    bottom: .3em;
+    width: 4px;
+    border-radius: 2px;
+    background-color: var(--link-hover-color);
+  }
+
+  .things-list {
+    margin-top: .35rem;
+  }
+
+  .thing-item {
+    display: flex;
+    align-items: center;
+    padding: .65rem .5rem;
+    border-top: 1px solid var(--line-color);
+    color: var(--text-color);
+    text-decoration: none;
+    transition: background-color .2s ease-in-out;
+  }
+
+  .thing-item:last-child {
+    border-bottom: 1px solid var(--line-color);
+  }
+
+  .thing-item[href]:hover {
+    background-color: var(--link-hover-bg-color);
+    color: var(--text-color);
+    text-decoration: none;
+  }
+
+  .thing-icon {
+    flex: none;
+    width: 1.75rem;
+    height: 1.75rem;
+    margin-right: .65rem;
+    border-radius: .35rem;
+    object-fit: contain;
+  }
+
+  .thing-icon-letter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .85rem;
+    font-weight: 600;
+    color: var(--link-hover-color);
+    background-color: var(--button-bg-color);
+    user-select: none;
+  }
+
+  .thing-body {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .thing-title {
+    display: block;
+    font-size: .95rem;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  .thing-desc {
+    display: block;
+    margin-top: .1rem;
+    font-size: .8rem;
+    line-height: 1.4;
+    color: var(--sec-text-color);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .thing-tags {
+    flex: none;
+    display: flex;
+    gap: .3rem;
+    margin-left: .75rem;
+  }
+
+  .thing-tag {
+    padding: .06rem .4rem;
+    border-radius: 1rem;
+    font-size: .7rem;
+    color: var(--sec-text-color);
+    background-color: var(--button-bg-color);
+    white-space: nowrap;
+  }
+
+  @media (max-width: 767px) {
+    .thing-tags {
+      display: none;
+    }
+  }
+
+  .things-empty {
+    padding: 1.2rem 0;
+    text-align: center;
+    color: var(--sec-text-color);
+  }
+</style>

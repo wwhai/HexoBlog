@@ -1,0 +1,105 @@
+# 我的作品 - 卡片数据
+# 分两个分区：software（软件作品）、literature（文学作品）
+# 新增作品：在对应分区下复制一个条目修改即可，保存后重新生成站点
+# 字段说明：
+#   name  作品名称（必填）
+#   desc  一句话简介
+#   image 图标或截图路径，留空则显示名称首字图标
+#   link  项目主页地址，留空则卡片不可点击
+#   tags  标签列表，可省略
+
+software:
+  - name: OneCube
+    desc: 基于 Arduino 的硬件控制项目，控制 LED、蜂鸣器与 I2C LCD 显示屏，硬件组件按模块化管理。
+    image: ""
+    link: ""
+    tags:
+      - Arduino
+      - 嵌入式
+
+  - name: Luckfox RKNN gRPC Accelerator
+    desc: 将 Luckfox Pico RV1106/RV1103 作为局域网 RKNN 推理加速节点，服务端基于 gRPC C++，推理引擎与会话管理采用 C 风格函数与结构体实现。
+    image: ""
+    link: ""
+    tags:
+      - RKNN
+      - gRPC
+      - 边缘计算
+
+  - name: EZLinker
+    desc: 简单易用的物联网设备管理系统。
+    image: /img/ez.png
+    link: ""
+    tags:
+      - 物联网
+      - 设备管理
+
+  - name: Modbus Server
+    desc: Go 实现的 Modbus TCP 服务端库，支持 MBAP 分帧与长连接，提供内存与 SQLite 存储后端、自定义功能码回调及超时管理。
+    image: ""
+    link: ""
+    tags:
+      - Go
+      - Modbus
+      - 工业协议
+
+  - name: RHILEX
+    desc: 工业边缘网关系统，面向工业自动化与物联网场景，提供设备接入、数据处理、协议转换与云边协同能力。
+    image: ""
+    link: ""
+    tags:
+      - 工业网关
+      - 边缘计算
+      - 协议转换
+
+  - name: Bacnet Stack Simple Implements
+    desc: 精简的 Bacnet 协议实现，提供基础的数据采集与路由转发功能。
+    image: ""
+    link: ""
+    tags:
+      - Bacnet
+      - 工业协议
+
+  - name: 青简谱
+    desc: 家族管理系统，从族人录入、世系绘制到成谱导出，为家族资料提供系统化的留存与管理工具。
+    image: ""
+    link: ""
+    tags:
+      - 家族谱系
+      - 管理系统
+
+literature:
+  - name: 甘肃省张掖市山丹-民乐县地区的姓氏来源研究
+    image: ""
+    link: ""
+    tags:
+      - 姓氏研究
+      - 地方史
+
+  - name: 甘肃省张掖市山丹-民乐县地区的军屯历史研究
+    image: ""
+    link: ""
+    tags:
+      - 军屯史
+      - 地方史
+
+  - name: 甘肃省张掖市山丹-民乐县地区的民间故事编纂
+    image: ""
+    link: ""
+    tags:
+      - 民间故事
+      - 搜集整理
+
+  - name: 甘肃省张掖市民乐县全营村王氏家族研究
+    image: ""
+    link: ""
+    tags:
+      - 家族研究
+      - 地方史
+
+  - name: 甘肃省张掖市民乐县全营村王氏家族家谱编纂
+    image: ""
+    link: ""
+    tags:
+      - 家谱
+      - 谱牒
